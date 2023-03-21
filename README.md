@@ -1,2 +1,1 @@
-# Cin-ma-de-la-Hess
-A school project in which we have to developped a cinema website 
+![image](https://user-images.githubusercontent.com/117746694/226584469-bf6821c3-8ad3-4f20-b947-a1929a3c2074.png)
