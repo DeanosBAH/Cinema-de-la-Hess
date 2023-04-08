@@ -1,0 +1,311 @@
+/* Reset CSS */
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+body {
+  background-image: url('pexels-pixabay-33129.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+.container {
+  max-width: 1200px; /* 75% de la largeur de la page */
+  margin: 0 auto; /* centrer horizontalement */
+}
+
+
+
+header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #333;
+  
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+.logo img {
+  width: 120px;
+  height: 50px;
+  margin-left: auto;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 1rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+nav ul li a.active {
+background-color: #555;
+border-radius: 0.25rem;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+  border-radius: 0.25rem;
+}
+
+main {
+  padding: 1rem;
+}
+
+/* Conteneur du carrousel */
+.carousel-container {
+width: 100vw;
+max-height: 50vh;
+position: relative;
+text-align: center;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.carousel-container .slide {
+position: relative;
+width: 100%;
+height: 100%;
+}
+
+.carousel-container .slide img {
+width: 700px;
+height: 280px;
+object-fit: cover;
+display: block;
+margin: 0 auto;
+}
+
+
+/* Boutons de navigation du carrousel */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  font-size: 1.5em;
+}
+
+.carousel-button.left {
+  left: 10px;
+}
+
+.carousel-button.right {
+  right: 10px;
+}
+
+.youth h2 {
+  visibility: visible;
+}
+.youth {
+ display: none
+ ;
+}
+
+.movie-sections {
+  display: flex;
+  justify-content: space-between; /* alignement des titres à gauche et à droite */
+  margin-top: 2rem;
+}
+
+.films, .upcoming, .youth {
+  width: 100%;
+}
+
+.films, .upcoming, .youth {
+  padding: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.films h2, .upcoming h2, .youth h2 {
+  margin-bottom: 1rem;
+  width: 50%; /* répartition de l'espace entre les titres */
+}
+
+
+.films h2 a, .upcoming h2 a, .youth h2 a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.films h2 a:hover, .upcoming h2 a:hover, .youth h2 a:hover {
+  color: #999;
+}
+
+.films-container, .youth-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  margin: 0 auto;
+  max-width: 2200px;
+}
+
+.film, .youth-film {
+  text-align: center;
+  padding: 10px;
+}
+
+.film img, .youth-film img {
+  max-width: 100%;
+}
+
+.film h3, .youth-film h3 {
+  margin-top: 10px;
+}
+
+.movie-list, .youth-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie, .youth-movie {
+  margin: 1rem;
+}
+
+.movie img, .youth-movie img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.movie h3, .youth-movie h3 {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+}
+
+
+
+.bottom-section {
+  display: flex;
+  clear: both;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background-color: #f2f2f2;
+}
+
+.bottom-section h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.bottom-section p {
+  margin-bottom: 0.5rem;
+}
+
+.app-icons img, .programme-download img {
+  width: 150px;
+  height: 50px;
+  margin-right: 1rem;
+}
+
+.app-icons img:last-child, .programme-download img:last-child {
+  margin-right: 0;
+}
+
+  
+
+
+
+
+
+
+/* Pied de page */
+/* Styles pour le footer */
+footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f8f8;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  footer p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  footer a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 0.5rem;
+  }
+  
+  footer a:hover {
+    color: #999;
+  }
+  
+  /* Styles pour les liens du footer */
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .footer-links a {
+    font-size: 0.9rem;
+    margin: 0 1rem;
+  }
+  
+  /* Empêcher le défilement */
+  body {
+    overflow-x:hidden;
+    overflow-y: scroll;
+    height: 100%;
+  }
+  
+  main {
+    min-height: calc(100% - 4rem); /* Soustraire la hauteur du footer */
+  }
+  
+  
