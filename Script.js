@@ -57,6 +57,128 @@ $(document).ready(function() {
       
     });
 
+   
+const seances = [
+    { 
+        title: 'Film 1', 
+        img: 'FILM1.jpg', 
+        seances: [
+            { time: '14:00', salle: 'Salle 1' },
+            { time: '16:00', salle: 'Salle 2' },
+            { time: '18:00', salle: 'Salle 3' },
+        ]
+    },
+    { 
+        title: 'Film 2', 
+        img: 'FILM2.jpg',
+        seances: [
+            { time: '10:00', salle: 'Salle 1' },
+            { time: '13:00', salle: 'Salle 2' },
+            { time: '20:00', salle: 'Salle 3' },
+        ]
+    },
+    { 
+        title: 'Film 2', 
+        img: 'FILM8.jpg',
+        seances: [
+            { time: '11:00', salle: 'Salle 1' },
+            { time: '14:00', salle: 'Salle 2' },
+            { time: '21:30', salle: 'Salle 3' },
+        ]
+    },{ 
+        title: 'Film 2', 
+        img: 'FILM3.webp',
+        seances: [
+            { time: '10:00', salle: 'Salle 1' },
+            { time: '13:00', salle: 'Salle 2' },
+            { time: '20:00', salle: 'Salle 3' },
+        ]
+    },{ 
+        title: 'Film 2', 
+        img: 'FILM4.jpg',
+        seances: [
+            { time: '10:00', salle: 'Salle 1' },
+            { time: '13:00', salle: 'Salle 2' },
+            { time: '20:00', salle: 'Salle 3' },
+        ]
+    },{ 
+        title: 'Film 2', 
+        img: 'FILM5.jpg',
+        seances: [
+            { time: '10:00', salle: 'Salle 1' },
+            { time: '13:00', salle: 'Salle 2' },
+            { time: '20:00', salle: 'Salle 3' },
+        ]
+    },{ 
+        title: 'Film 2', 
+        img: 'FILM6.jpg',
+        seances: [
+            { time: '10:00', salle: 'Salle 1' },
+            { time: '13:00', salle: 'Salle 2' },
+            { time: '20:00', salle: 'Salle 3' },
+        ]
+    },{ 
+        title: 'Film 2', 
+        img: 'FILM7.jpg',
+        seances: [
+            { time: '10:00', salle: 'Salle 1' },
+            { time: '13:00', salle: 'Salle 2' },
+            { time: '20:00', salle: 'Salle 3' },
+        ]
+    },
+    // Ajoutez autant de films que nécessaire.
+];
+
+function renderSeances() {
+    const seanceContainer = document.getElementById('seanceContainer');
+    seances.forEach(film => {
+        const filmElement = document.createElement('div');
+        filmElement.innerHTML = `
+            <h3>${film.title}</h3>
+            <img src="${film.img}" alt="${film.title}">
+            <ul>
+                ${film.seances.map(seance => `<li>${seance.time} - ${seance.salle}</li>`).join('')}
+            </ul>
+        `;
+        seanceContainer.appendChild(filmElement);
+    });
+}
+
+document.getElementById('horaires-link').addEventListener('click', function (event) {
+    event.preventDefault();
+    document.getElementById('horaires').style.display = 'block';
+    renderSeances();
+});
+
+$(document).ready(function() {
+    $('#horaires-link').click(function(e) {
+        e.preventDefault();
+        $('#seanceContainer').show();
+    });
+
+    $('#now-showing-link, #coming-soon-link, #tarifs-link, #contact-link').click(function(e) {
+        e.preventDefault();
+        $('#seanceContainer').hide();
+    });
+});
+$(document).ready(function() {
+    $('#tarifs-link').click(function(e) {
+        e.preventDefault();
+        $('#now-showing').hide();
+        $('#seanceContainer').hide();
+        $('#tarifs').show();
+    });
+    $('#now-showing-link').click(function(e) {
+        e.preventDefault();
+        $('#now-showing').show();
+        $('#seanceContainer').hide();
+        $('#tarifs').hide();
+    });
+});
+
+
+
+
 
 
 
