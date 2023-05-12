@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Upload de fichier</title>
+  </head>
+  <body>
+    <form action="#" method="post" enctype="multipart/form-data">
+      <label for="identifiant">Identifiant :</label>
+      <input type="text" name="identifiant" id="identifiant" required autofocus pattern="[a-z]+.*" title="Le nom d'utilisateur doit commencer par une lettre minuscule."><br><br>
+      
+      <label for="mot_de_passe">Mot de passe :</label>
+      <input type="password" name="mot_de_passe" id="mot_de_passe" required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\W).{4,8}"><br><br>
+      
+      <input type="hidden" name="MAX_FILE_SIZE" value="3000">
+      
+      <label for="fichiers">Fichiers :</label>
+      <input type="file" name="fichiers" id="fichiers" multiple><br><br>
+      
+      <input type="submit" value="Envoyer">
+    </form>
+  </body>
+</html>
